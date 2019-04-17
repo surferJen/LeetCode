@@ -55,6 +55,9 @@ def count_numbers(num):
             new_list.append(current_value)
             counter += 1
             current_value = value
+    
+    new_list.append(counter)
+    new_list.append(current_value)
         
 
     return new_list
