@@ -26,7 +26,7 @@ class Solution:
                         if new_list[a] + new_list[b] + new_list[c] == target:
                             ans.extend([new_list[a], new_list[b], new_list[c]])
                         
-                        d+=1
+                        d += 1 
                 
                     c += 1
                     d = c + 1
@@ -34,6 +34,7 @@ class Solution:
                 b += 1
                 c = b + 1
                 d = c + 1
+            
             a +=1
             b = a + 1
             c = b + 1
