@@ -15,5 +15,6 @@
 # Your program will be judged on how fast it runs and how clearly the code is written. We will be running your program as well as reading the source code, so anything you can do to make this process easier would be appreciated.
 
 def rank_word_if_alphabetized():
+    
 
 print(rank_word_if_alphabetized("BAAA"))
