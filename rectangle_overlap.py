@@ -19,7 +19,11 @@ Output: False
 
 
 def isRectangleOverlap(rec1, rec2) -> bool:
-    if rec2[1] < rec1[3] and rec2[0] < rec1[2]:
-        return True
-    else:
-        return False 
+    #if rectangles overlap by only the edges (not actual area overlap) or rectangles are entirely separated
+    if rec1[0] >= rec2[2] or rec1[2] <= rec2[0]:
+        return False
+    
+    if rec1[1] >= rec2[3] or rec1[3] <= rec2[1]:
+        return False
+    
+    return True   
