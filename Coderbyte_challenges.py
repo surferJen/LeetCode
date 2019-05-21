@@ -38,8 +38,40 @@ def LongestWord(sen):
     
     return answer
         
+#CHALLENGE 3 REVERSE STRING
 
 
+# Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH. 
+
+
+# Sample Test Cases
+
+# Input:"coderbyte"
+
+# Output:etybredoc
+
+
+# Input:"I Love Code"
+
+# Output:edoC evoL I
+
+def FirstReverse(str):
+
+    
+    reversed_str_lst = []
+    answer = ""
+
+    for index in range(len(str)-1, -1, -1):
+        reversed_str_lst.append(str[index])
+    
+    answer = ''.join(reversed_str_lst)
+
+    return answer
+
+
+print(FirstReverse("Jen loves programming"))
+print(FirstReverse("coderbyte"))
+print(FirstReverse("I Love Code"))
 
 
 
