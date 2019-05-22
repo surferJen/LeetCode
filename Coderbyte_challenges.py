@@ -69,9 +69,61 @@ def FirstReverse(str):
     return answer
 
 
-print(FirstReverse("Jen loves programming"))
-print(FirstReverse("coderbyte"))
-print(FirstReverse("I Love Code"))
+# print(FirstReverse("Jen loves programming"))
+# print(FirstReverse("coderbyte"))
+# print(FirstReverse("I Love Code"))
+
+#CHALLENGE 4 REVERSE LIST
+
+# Given an array of strings, reverse them and their order in such way that their length stays the same as the length of the original inputs.
+
+'''
+Test.assert_equals(
+    reverse(["I", "like", "big", "butts", "and", "I", "cannot", "lie!"]),
+            ["!", "eilt", "onn", "acIdn", "ast", "t", "ubgibe", "kilI"]
+)
+
+Test.assert_equals(
+    reverse(["?kn", "ipnr", "utotst", "ra", "tsn", "iksr", "uo", "yer", "ofebta", "eote", "vahu", "oyodpm", "ir", "hsyn", "amwoH"]),
+            ["How", "many", "shrimp", "do", "you", "have", "to", "eat", "before", "your", "skin", "starts", "to", "turn", "pink?"]
+)
+'''
+
+# PSEUDO:
+#     create an empty array.
+#     append each character reversed by using reverse built in method. 
+#     [a, s, d, f, g, s, ...]
+#     iterate over input. count each string. and append that many chharacters to dictionary.
+
+def ReverseLst(lst):
+    
+    new_input = "".join(lst)
+    new_input = new_input[::-1]
+    
+    counter_lst = []
+    
+    counter = 0
+    for i in lst:
+        for x in i:
+            counter += 1
+        counter_lst.append(counter)
+        counter = 0
+    
+    answer = []
+    for y in counter_lst:
+        
+        answer.append(new_input[:y])
+        new_input = new_input[y:]
+    
+    return answer
+    
+        
+
+print(ReverseLst(["I", "like", "big"]))
+print(ReverseLst(["I", "like", "big", "butts", "and", "I", "cannot", "lie!"]))
+print(ReverseLst(["?kn", "ipnr", "utotst", "ra", "tsn", "iksr", "uo", "yer", "ofebta", "eote", "vahu", "oyodpm", "ir", "hsyn", "amwoH"]))
+
+    
 
 
 
