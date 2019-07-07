@@ -51,6 +51,8 @@ d = LinkedListNode('B')
 a.next = b
 b.next = c 
 c.next = d
+d.next = b
+
 
 def contains_cycle(first_node):
     
@@ -66,11 +68,40 @@ def contains_cycle(first_node):
     
     return False 
 
-
-
-
-
-    
-    
-
 contains_cycle(LinkedList('A'))
+
+#Reverse a Linked List
+
+#Write a function for reversing a linked list. Do it in place. Your function will have one input: the head of the list. Your function should return the new head of the list. Here's a sample linked list node class:
+
+class LinkedListNode(object):
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+a = LinkedListNode("A")
+b = LinkedListNode("B")
+c = LinkedListNode("C")
+
+a.next = b
+b.next = c 
+
+def reverse_linked_list(head_linked_list):
+    
+    current_node = head_linked_list
+    previous_node = None
+    next_node = None
+
+    while current_node:
+        next_node = current_node.next
+        
+        current_node.next = previous_node
+        
+        previous_node = current_node
+        current_node = next_node
+    
+    return previous_node
+
+
+reverse_linked_list(a)
