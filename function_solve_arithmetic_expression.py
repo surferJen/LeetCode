@@ -24,7 +24,7 @@ class Parser:
         return self.parseAddition()
     
     def parseAddition(self):
-        values = [self.parseMultiplication()]
+        values = [self.parseMultiplication()] #
         while True:
             char = self.peek()
             if char == '+':
@@ -38,7 +38,7 @@ class Parser:
         return sum(values)
     
     def parseMultiplication(self):
-        values = [self.parseValue()]
+        values = [self.parseValue()] = []
         while True:
             char = self.peek()
             if char == '*':
