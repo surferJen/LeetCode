@@ -29,21 +29,17 @@ def kth_to_last_node(k, head_node):
     current_node = head_node
 
     counter = 0
-
     
     while current_node is not None:
         counter += 1
-        
-        if current_node.next is not None:
-            current_node = current_node.next
-    
-    current_node = head_node
+        current_node = current_node.next
+
     index_nth_node = counter - k
-    nth_node = ""
+    nth_node = head_node 
 
     while index_nth_node >= 0:
+        nth_node = head_node.next 
         index_nth_node -= 1
-        current_node = current_node.next
     
     return nth_node
 
